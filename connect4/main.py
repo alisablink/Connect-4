@@ -44,6 +44,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     # Check for positive slope diagonals
     for a in range(4): # [3,0] to [0.3]
         if board[3-a, a] == 1:
@@ -54,6 +56,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(5):
         if board[4-a, a] == 1:
             player1win += 1
@@ -63,6 +67,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(6):
         if board[5-a, a] == 1:
             player1win += 1
@@ -72,6 +78,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(6):
         if board[5-a, a+1] == 1:
             player1win += 1
@@ -81,6 +89,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(5):
         if board[5-a, a+2] == 1:
             player1win += 1
@@ -90,6 +100,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(4):
         if board[5-a, a+3] == 1:
             player1win += 1
@@ -99,6 +111,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     # Check for negative slope diagonals
     for a in range(4):
         if board[a+2, a] == 1:
@@ -109,6 +123,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(5):
         if board[a+1, a] == 1:
             player1win += 1
@@ -118,6 +134,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(6):
         if board[a, a] == 1:
             player1win += 1
@@ -127,6 +145,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(6):
         if board[a, a+1] == 1:
             player1win += 1
@@ -136,6 +156,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(5):
         if board[a, a+2] == 1:
             player1win += 1
@@ -145,6 +167,8 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+    player1win = 0
+    player2win = 0
     for a in range(4):
         if board[a, a+3] == 1:
             player1win += 1
@@ -154,8 +178,6 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
-
-        
 
 board = create_board()
 print(board)
