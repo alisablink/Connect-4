@@ -24,8 +24,8 @@ def get_next_open_row(board,col):
 def check_victory(board, row, col):
     player1win = 0
     player2win = 0
-    for r in range(6): # Check the row 
-        if board[col][r] == 1:
+    for c in range(7): # Check the row 
+        if board[row][c] == 1:
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
