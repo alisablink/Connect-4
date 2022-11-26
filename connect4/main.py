@@ -236,11 +236,13 @@ while not game_over:
                     print(board)
                     print("Player 1 has won!")
                     game_over = True
+                    pygame.time.wait(1500)
                     break
                 elif result == 2:
                     print(board)
                     print("Player 2 has won!")
                     game_over = True
+                    pygame.time.wait(1500)
                     break
                 pygame.draw.rect(screen, (0,0,0), (0,0,width, SQUARE_SIZE))
                 turn += 1
@@ -252,4 +254,3 @@ while not game_over:
                 pygame.display.update()
                 
                 print(board)
-
