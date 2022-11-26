@@ -5,9 +5,6 @@ import sys
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 
-BLUE = (0,0,255)
-YELLOW = ()
-
 def create_board():
     board = np.zeros((6,7))
     return board
@@ -192,10 +189,8 @@ def check_victory(board, row, col):
 pygame.init()
 
 board = create_board()
-print(board)
 
 game_over = False
-
 turn = 0
 
 def draw_board(board):
@@ -205,7 +200,6 @@ def draw_board(board):
             pygame.draw.circle(screen, (0,0,0), (c*SQUARE_SIZE+SQUARE_SIZE/2, r*SQUARE_SIZE+SQUARE_SIZE*3/2), SQUARE_SIZE/2 - 5)
     pass
 
-
 SQUARE_SIZE = 100
 width = COLUMN_COUNT * SQUARE_SIZE
 height = (ROW_COUNT+1) * SQUARE_SIZE
@@ -214,7 +208,6 @@ size = (width, height)
 screen = pygame.display.set_mode(size)
 draw_board(board)
 pygame.display.update()
-
 
 while not game_over:
     for event in pygame.event.get():
@@ -233,14 +226,10 @@ while not game_over:
             if is_valid_location(board, col):
                 result = drop_piece(col, turn+1)
                 if result == 1:
-                    print(board)
-                    print("Player 1 has won!")
                     game_over = True
                     pygame.time.wait(1500)
                     break
                 elif result == 2:
-                    print(board)
-                    print("Player 2 has won!")
                     game_over = True
                     pygame.time.wait(1500)
                     break
@@ -252,5 +241,3 @@ while not game_over:
                 else:
                     pygame.draw.circle(screen, (255,255,0), (event.pos[0],SQUARE_SIZE/2), SQUARE_SIZE/2)
                 pygame.display.update()
-                
-                print(board)
