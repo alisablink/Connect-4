@@ -40,6 +40,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for r in range(6): # Check the column
@@ -51,6 +54,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     # Check for positive slope diagonals
@@ -59,10 +65,14 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[3-a, a] == 2:
+        elif board[3-a, a] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
+        
     player1win = 0
     player2win = 0
     for a in range(5):
@@ -70,10 +80,13 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[4-a, a] == 2:
+        elif board[4-a, a] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(6):
@@ -81,10 +94,13 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[5-a, a] == 2:
+        elif board[5-a, a] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(6):
@@ -92,10 +108,13 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[5-a, a+1] == 2:
+        elif board[5-a, a+1] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(5):
@@ -103,10 +122,13 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[5-a, a+2] == 2:
+        elif board[5-a, a+2] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(4):
@@ -114,10 +136,13 @@ def check_victory(board, row, col):
             player1win += 1
             player2win = 0
             if player1win == 4: return 1
-        if board[5-a, a+3] == 2:
+        elif board[5-a, a+3] == 2:
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     # Check for negative slope diagonals
@@ -130,6 +155,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(5):
@@ -141,6 +169,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(6):
@@ -152,6 +183,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(6):
@@ -163,6 +197,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(5):
@@ -174,6 +211,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
     player1win = 0
     player2win = 0
     for a in range(4):
@@ -185,6 +225,9 @@ def check_victory(board, row, col):
             player1win = 0
             player2win += 1
             if player2win == 4: return 2
+        else:
+            player1win = 0
+            player2win = 0
 
 pygame.init()
 
